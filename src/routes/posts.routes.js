@@ -11,7 +11,9 @@ router.put("/:id/like", postCtr.like)
 //get post
 router.get("/:id", postCtr.getPost)
 //my posts and friends posts
-router.get("/timeline/all", postCtr.timeline)
+router.get("/timeline/:userId", postCtr.timeline)
+//get all user posts
+router.get("/profile/:username", postCtr.userPosts)
 
 
 module.exports = router;
